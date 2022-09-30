@@ -1,15 +1,6 @@
 # dynamice
 **DynaMICE (Dynamic Measles Immunisation Calculation Engine)** is an age-structured compartmental model for measles transmission and vaccination. 
 
-## Installation of dynamice library
-
-### From github:
-In Rstudio:
-```
-install.packages("devtools")
-library(devtools)
-install_github("lshtm-vimc/dynamice")
-```
 
 Details of model structure and assumptions can be found in the following references:
 - Fu H, Abbas K, Klepac P, van Zandvoort K, Tanvir H, Portnoy A, et al. Effect of evidence updates on key determinants of measles vaccination impact: a DynaMICE modelling study in ten high-burden countries. BMC Med. 2021;19(1):281.
@@ -24,3 +15,14 @@ The model has also been applied in the following studies to understand measles v
   - https://doi.org/10.7554/eLife.67023
 - Toor J, Echeverria-Londono S, Li X, Abbas K, Carter ED, Clapham HE, et al. Lives saved with vaccination for 10 pathogens across 112 countries in a pre-COVID-19 world. Elife. 2021;10.
   - https://doi.org/10.7554/eLife.67635
+
+
+## Installation of DynaMICE library
+
+### From github:
+In RStudio:
+```
+install.packages("devtools")
+library(devtools)
+install_github("lshtm-vimc/dynamice")
+```
