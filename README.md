@@ -19,7 +19,7 @@ The model has also been applied in the following studies to understand measles v
 
 ## Installation of DynaMICE library
 
-1. Compile the model Fortran 95 code located in `model\fortran` using `gfortran` so that the resulting .exe files are located in `model\compiled`.
+1. Compile the model Fortran 95 code located in `model\fortran` using `gfortran` so that the resulting .exe files are located in `model\compiled`. For Windows machines you should be able to use Cygwin, mingw, or mingw in WSL. See `model\fortran` folder for more details and a rudimentary Makefile.
 2. Install library (see below)
 
 ### From github:
