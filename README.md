@@ -19,6 +19,9 @@ The model has also been applied in the following studies to understand measles v
 
 ## Installation of DynaMICE library
 
+1. Compile the model Fortran 95 code located in `model\fortran` using `gfortran` so that the resulting .exe files are located in `model\compiled`.
+2. Install library (see below)
+
 ### From github:
 In RStudio:
 ```
