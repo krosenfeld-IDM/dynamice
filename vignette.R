@@ -95,7 +95,7 @@ var <- list (
 
   # countries - specify iso3 codes to analyse only these countries
   #             or set it to "all" to analyse all included countries
-  countries                         = c("PAK"),#
+  countries                         = c("PAK", "IND"),#
 
   cluster_cores                     = 1,    # number of cores
   psa                               = 0     # psa runs; 0 for single central run
@@ -141,17 +141,17 @@ if (update_coverage_inputs) {
   # (1) create vaccine coverage file (0% coverage) for no vaccination scenario
   create_no_vaccination_coverage_file (
     no_vaccination_coverage_file = paste0 (var$vaccine_coverage_folder,
-                                           "coverage_", scenarios[1],".csv"),
+                                           "coverage_", vaccine_strategies[1],".csv"),
     vaccination_coverage_file    = paste0 (var$vaccine_coverage_folder,
-                                           "coverage_", scenarios[2],".csv")
+                                           "coverage_", vaccine_strategies[2],".csv")
   )
 
   # (2) create a vaccine coverage file for no future SIA scenario
   continuous_sia_coverage <- fread (paste0(var$vaccine_coverage_folder,
-                                           "coverage_", scenarios[4],".csv"))
+                                           "coverage_", vaccine_strategies[4],".csv"))
   stop_sia_coverage <- continuous_sia_coverage [!(year > 2019 & activity_type == "campaign")]
   fwrite (stop_sia_coverage, file = paste0(var$vaccine_coverage_folder,
-                                           "coverage_", scenarios[5],".csv"))
+                                           "coverage_", vaccine_strategies[5],".csv"))
 
   # (3) generate 2 vaccine coverage files per scenario for routine and SIA
   for (index in 1:5) {
@@ -161,7 +161,7 @@ if (update_coverage_inputs) {
       coverage_prefix            = var$coverage_prefix,
       touchstone                 = var$touchstone,
       antigen                    = var$antigen,
-      scenario_name              = scenarios [index],
+      scenario_name              = vaccine_strategies [index],
       rev_cov                    = FALSE # coverage data have been pre-processed
     )
   }
